@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on My Portfolio</title>
+    <link>//localhost:1313/project/</link>
+    <description>Recent content in Projects on My Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>E-Survey Teknik Informatika</title>
+      <link>//localhost:1313/project/esurvey/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/esurvey/</guid>
+      <description>&lt;p&gt;E-Survey Teknik Informatika adalah sistem survei online yang dibangun menggunakan Laravel framework dengan template engine Blade dan styling Tailwind CSS. Sistem ini memudahkan jurusan dalam melakukan berbagai jenis survei. Fitur utama meliputi:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Manajemen survei dan pertanyaan yang fleksibel&lt;/li&gt;&#xA;&lt;li&gt;Multiple choice, essay, dan rating scale questions&lt;/li&gt;&#xA;&lt;li&gt;Dashboard admin untuk monitoring hasil survei&lt;/li&gt;&#xA;&lt;li&gt;Export hasil survei ke Excel/PDF&lt;/li&gt;&#xA;&lt;li&gt;Analisis dan visualisasi data survei&lt;/li&gt;&#xA;&lt;li&gt;Notifikasi email untuk responden&lt;/li&gt;&#xA;&lt;li&gt;Integrasi dengan database mahasiswa&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Proyek ini menggunakan teknologi modern untuk menghasilkan sistem survei yang mudah digunakan dan dapat disesuaikan dengan berbagai kebutuhan survei jurusan.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>E-Parking Teknik Elektro</title>
+      <link>//localhost:1313/project/eparking/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/eparking/</guid>
+      <description>&lt;p&gt;E-Parking Teknik Elektro adalah sistem parkir otomatis berbasis RFID dan monitoring web untuk area parkir Jurusan Teknik Elektro. Sistem ini mengintegrasikan perangkat keras dan perangkat lunak untuk manajemen parkir yang efisien. Fitur utama meliputi:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sistem gate otomatis dengan RFID reader&lt;/li&gt;&#xA;&lt;li&gt;Monitoring slot parkir realtime&lt;/li&gt;&#xA;&lt;li&gt;Dashboard admin untuk manajemen pengguna&lt;/li&gt;&#xA;&lt;li&gt;Riwayat parkir dan laporan statistik&lt;/li&gt;&#xA;&lt;li&gt;Notifikasi slot penuh via Telegram&lt;/li&gt;&#xA;&lt;li&gt;Integrasi dengan database civitas akademik&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Proyek ini menggabungkan teknologi IoT dan web development untuk menghasilkan solusi parkir modern yang aman dan efisien.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

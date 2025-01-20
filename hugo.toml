@@ -1,0 +1,49 @@
+baseURL = "/"
+languageCode = "en-us" 
+title = "My Portfolio"
+theme = "hugo-profile"
+
+# Enable emoji support
+enableEmoji = true
+
+# Pengaturan menu
+[menu]
+
+[params.index]
+  enable = true
+  title = "Home"
+
+[params.about]
+  enable = true
+
+[params.experience]
+  enable = true
+
+[params.projects]
+  enable = true
+
+[params.contact]
+  enable = true
+  
+
+[params]
+  title = "My Portfolio"
+  description = "Welcome to my portfolio website"
+  staticPath = ""
+
+  [params.hero]
+    enable = true
+    image = "foto.png"
+    intro = "HELLO I'M"
+    title = "NANDA IKHWANUL"
+    subtitle = "I am a dedicated professional in my field"
+    content = "with extensive experience in various fields."
+    
+    [params.hero.button]
+      enable = true
+      name = "DOWNLOAD CV"
+      url = "cv.pdf"
+      download = true
+      newPage = true
+
+  

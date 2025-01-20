@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Portfolio</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on My Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>//localhost:1313/about/</link>
+      <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/about/</guid>
+      <description>&lt;p&gt;I have experience and expertise in web development with a focus on Node.js, React.js, Tailwind, Bootstrap, and MongoDB. In backend development, I can build robust and scalable systems using Node.js, with capabilities such as server-side scripting, database management, and API integration.&lt;/p&gt;&#xA;&lt;p&gt;In the frontend side, I am skilled in using React.js to create interactive and responsive user interfaces. Apart from that, I am proficient in using Tailwind and Bootstrap as CSS frameworks, as well as experience managing databases using MongoDB.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact&#34;</title>
+      <link>//localhost:1313/contact/</link>
+      <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/contact/</guid>
+      <description>&lt;h1 id=&#34;about-us&#34;&gt;About Us&lt;/h1&gt;&#xA;&lt;p&gt;Kontol sss&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project</title>
+      <link>//localhost:1313/project/</link>
+      <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/</guid>
+      <description>&lt;h1 id=&#34;about-us&#34;&gt;About Us&lt;/h1&gt;&#xA;&lt;p&gt;Kontol sss&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>E-Survey Teknik Informatika</title>
+      <link>//localhost:1313/project/esurvey/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/esurvey/</guid>
+      <description>&lt;p&gt;E-Survey Teknik Informatika adalah sistem survei online yang dibangun menggunakan Laravel framework dengan template engine Blade dan styling Tailwind CSS. Sistem ini memudahkan jurusan dalam melakukan berbagai jenis survei. Fitur utama meliputi:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Manajemen survei dan pertanyaan yang fleksibel&lt;/li&gt;&#xA;&lt;li&gt;Multiple choice, essay, dan rating scale questions&lt;/li&gt;&#xA;&lt;li&gt;Dashboard admin untuk monitoring hasil survei&lt;/li&gt;&#xA;&lt;li&gt;Export hasil survei ke Excel/PDF&lt;/li&gt;&#xA;&lt;li&gt;Analisis dan visualisasi data survei&lt;/li&gt;&#xA;&lt;li&gt;Notifikasi email untuk responden&lt;/li&gt;&#xA;&lt;li&gt;Integrasi dengan database mahasiswa&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Proyek ini menggunakan teknologi modern untuk menghasilkan sistem survei yang mudah digunakan dan dapat disesuaikan dengan berbagai kebutuhan survei jurusan.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>E-Parking Teknik Elektro</title>
+      <link>//localhost:1313/project/eparking/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/eparking/</guid>
+      <description>&lt;p&gt;E-Parking Teknik Elektro adalah sistem parkir otomatis berbasis RFID dan monitoring web untuk area parkir Jurusan Teknik Elektro. Sistem ini dibangun menggunakan framework Laravel dengan tampilan yang responsif menggunakan Blade template engine dan Tailwind CSS. Fitur utama meliputi:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sistem gate otomatis dengan RFID reader terintegrasi Laravel&lt;/li&gt;&#xA;&lt;li&gt;Monitoring slot parkir realtime dengan Livewire&lt;/li&gt;&#xA;&lt;li&gt;Dashboard admin dengan antarmuka Blade yang elegan&lt;/li&gt;&#xA;&lt;li&gt;Riwayat parkir dan laporan statistik menggunakan Laravel Charts&lt;/li&gt;&#xA;&lt;li&gt;Notifikasi slot penuh via Telegram menggunakan Laravel Notifications&lt;/li&gt;&#xA;&lt;li&gt;Integrasi dengan database civitas akademik melalui Eloquent ORM&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Proyek ini menggabungkan teknologi IoT dan web development modern menggunakan Laravel ecosystem untuk menghasilkan solusi parkir yang aman, efisien dan mudah dikelola.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Experience</title>
+      <link>//localhost:1313/experience/experience/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/experience/experience/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

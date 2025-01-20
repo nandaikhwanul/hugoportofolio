@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="generator" content="Hugo 0.138.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="//localhost:1313/">
+  <meta property="og:site_name" content="My Portfolio">
+  <meta property="og:title" content="My Portfolio">
+  <meta property="og:description" content="Welcome to my portfolio website">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="My Portfolio">
+  <meta name="twitter:description" content="Welcome to my portfolio website">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content=Welcome&#32;to&#32;my&#32;portfolio&#32;website>
+<link rel="stylesheet" href="/css/index.css" media="all">
+<link rel="stylesheet" href="/css/projects.css" media="all">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <title>
+My Portfolio
+
+  </title>
+
+  
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    p, a, span, li, div {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+    }
+  </style>
+</head>
+
+<body class="light overflow-x-hidden">
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.navbar-toggler');
+        const navContent = document.querySelector('#navbarContent');
+        
+        hamburger.addEventListener('click', function() {
+            navContent.classList.toggle('show');
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+        });
+    });
+</script>
+
+
+
+
+
+<header id="profileHeader" class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900">
+    <nav class="pt-3 navbar navbar-expand-lg ">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="//localhost:1313/">
+                
+                My Portfolio
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Ctrl &#43; k to Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="//localhost:1313/#about" aria-label="about">
+                            About
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="//localhost:1313/#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="//localhost:1313/#projects"
+                            aria-label="projects">
+                            Projects
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="//localhost:1313/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+
+<div class="judul select-none relative w-full h-screen" id="home">
+  
+  <div class="absolute inset-0 w-screen h-screen overflow-hidden" style="z-index: 1;">
+    <div class="firework absolute left-1/4"></div>
+    <div class="firework absolute left-2/4" style="animation-delay: 0.5s;"></div>
+    <div class="firework absolute right-1/4" style="animation-delay: 1s;"></div>
+    <div class="firework absolute left-1/3" style="animation-delay: 1.5s;"></div>
+    <div class="firework absolute right-1/3" style="animation-delay: 2s;"></div>
+    <div class="firework absolute left-10" style="animation-delay: 0.7s;"></div>
+    <div class="firework absolute right-10" style="animation-delay: 1.2s;"></div>
+    <div class="firework absolute left-[45%]" style="animation-delay: 1.7s;"></div>
+    <div class="firework absolute right-[45%]" style="animation-delay: 0.3s;"></div>
+    <style>
+      .firework {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        top: 50%;
+        animation: firework 2s ease-out infinite;
+      }
+      
+      @keyframes firework {
+        0% {
+          transform: translate(0, 0);
+          width: 4px;
+          opacity: 1;
+          background: #ff8426;
+        }
+        50% {
+          width: 4px;
+          opacity: 1;
+        }
+        100% {
+          width: 200px;
+          padding: 4px;
+          opacity: 0;
+          background: #ff8426;
+          transform: translate(-50%, -200px) scale(1) rotate(45deg);
+          box-shadow: 
+            0 0 20px #fa6401,
+            0 0 40px #ff8426,
+            0 0 60px #ffb26b,
+            0 0 80px #fff5e9;
+        }
+      }
+    </style>
+  </div>
+
+  <div class="flex flex-col justify-center items-center px-10 pt-20 lg:pt-20" data-aos="fade-down">
+    
+    <div class="w-full flex justify-center">
+      <img src="/images/foto.png" alt="" class="drop-shadow-xl" style="width: 200px; z-index: 3; @media (min-width: 768px) { width: 300px; } @media (min-width: 1024px) { width: 400px; }">
+    </div>
+    <div class="w-full flex justify-center">
+      <div class="grid place-items-center text-center">
+        <h1 class="text-4xl font-extrabold tracking-wide">HELLO I&#39;M<br /></h1>
+        <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+          <span class="text-4xl font-extrabold tracking-wide relative">NANDA IKHWANUL</span>
+        </span>
+        <span class="text-lg tracking-normal font-[500]">I am a dedicated professional in my field</span>
+        <span class="text-lg tracking-normal font-[500] sm:mb-5">with extensive experience in various fields.</span>
+        <div class="flex gap-4">
+          
+          <button class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-44 h-10 rounded-xl text-white text-base font-medium tracking-wide relative hover:brightness-90">
+            <a href="cv.pdf" download  target="_blank"  class="flex items-center justify-center text-center  gap-2 text-sm">
+              DOWNLOAD CV
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+            </a>
+          </button>
+          
+          <button class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-32 h-10 rounded-xl text-white text-base font-medium tracking-wide relative hover:brightness-90 outline-none">
+            <span class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-sky-700 opacity-100 right-1 top-0"></span>
+            <a href="#contact" class="smooth-scroll">CONTACT</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="about" class="min-h-screen py-20 select-none">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16 tracking-wide" data-aos="fade-down"></h2>
+
+        <div class="grid gap-12 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center">
+            
+            <div class="p-8 rounded-2xl w-full max-w-sm shadow-lg transform hover:scale-105 transition duration-300" data-aos="fade-right">
+                <div class="text-center mb-6">
+                    <span class="inline-block p-3 bg-indigo-100 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </div>
+                <h3 class="text-2xl font-bold text-center mb-4">Backend Development</h3>
+                <p class="text-black text-center">
+                    
+                        <p>I have experience and expertise in web development with a focus on Node.js, React.js, Tailwind, Bootstrap, and MongoDB. In backend development, I can build robust and scalable systems using Node.js, with capabilities such as server-side scripting, database management, and API integration.
+                    
+                </p>
+            </div>
+
+            
+            
+            <div class="relative hidden md:hidden lg:block mx-auto" data-aos="zoom-in">
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
+
+                
+                <img src="/images/blobanimation.svg" alt="blob animation" class="w-full absolute top-0 left-0 animate-float" />
+
+                
+                <img src="/images/office.png" 
+                     alt="About Image" 
+                     class="w-4/5 mx-auto relative z-10 drop-shadow-2xl transform hover:scale-105 transition duration-300" />
+            </div>
+            
+
+            
+            <div class="p-8 rounded-2xl w-full max-w-sm shadow-lg transform hover:scale-105 transition duration-300" data-aos="fade-left">
+                <div class="text-center mb-6">
+                    <span class="inline-block p-3 bg-pink-100 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                        </svg>
+                    </span>
+                </div>
+                <h3 class="text-2xl font-bold text-center mb-4 text-gray-800">Frontend Development</h3>
+                <p class="text-gray-600 leading-relaxed text-center">
+                    
+                        
+<p>In the frontend side, I am skilled in using React.js to create interactive and responsive user interfaces. Apart from that, I am proficient in using Tailwind and Bootstrap as CSS frameworks, as well as experience managing databases using MongoDB.
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="experience" class="h-screen py-20 px-4 mb-20">
+  <div class="container mx-auto h-full">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 tracking-wide animate-fade-in" data-aos="zoom-in">
+      <i class="fas fa-briefcase text-pink-500 mr-4 animate-bounce"></i>
+      Experience
+    </h2>
+    <div class="w-full max-h-[calc(100vh-200px)] overflow-y-auto" data-aos="fade-up">
+      
+        <div class="rounded-lg p-6 bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+         
+          <div class="flex flex-wrap justify-center gap-20 md:gap-20 mb-6 w-full p-4 grid grid-cols-4 md:grid-cols-6">
+            
+              
+                <div class="flex flex-col items-center group">
+                  <i class="fab fa-html5 text-orange-500 text-2xl md:text-4xl group-hover:scale-125 transition-all duration-300 transform group-hover:rotate-12 hover:animate-bounce"></i>
+                  <span class="text-xs md:text-sm mt-2">HTML</span>
+                </div>
+              
+            
+              
+                <div class="flex flex-col items-center group">
+                  <i class="fab fa-css3-alt text-blue-600 text-2xl md:text-4xl group-hover:scale-125 transition-all duration-300 transform group-hover:rotate-12 hover:animate-bounce"></i>
+                  <span class="text-xs md:text-sm mt-2">CSS</span>
+                </div>
+              
+            
+              
+                <div class="flex flex-col items-center group">
+                  <i class="fab fa-js text-yellow-400 text-2xl md:text-4xl group-hover:scale-125 transition-all duration-300 transform group-hover:rotate-12 hover:animate-bounce"></i>
+                  <span class="text-xs md:text-sm mt-2">JavaScript</span>
+                </div>
+              
+            
+              
+                <div class="flex flex-col items-center group">
+                  <i class="fab fa-node-js text-green-600 text-2xl md:text-4xl group-hover:scale-125 transition-all duration-300 transform group-hover:rotate-12 hover:animate-bounce"></i>
+                  <span class="text-xs md:text-sm mt-2">NodeJS</span>
+                </div>
+              
+            
+              
+                <div class="flex flex-col items-center group">
+                  <i class="fab fa-bootstrap text-purple-600 text-2xl md:text-4xl group-hover:scale-125 transition-all duration-300 transform group-hover:rotate-12 hover:animate-bounce"></i>
+                  <span class="text-xs md:text-sm mt-2">Bootstrap</span>
+                </div>
+              
+            
+              
+                <div class="flex flex-col items-center group">
+                  <img src="/images/tailwindcss.svg" class="w-6 h-6 md:w-8 md:h-8 group-hover:scale-125 transition-all duration-300 transform group-hover:rotate-12 hover:animate-bounce" alt="Tailwind" />
+                  <span class="text-xs md:text-sm mt-2">Tailwind</span>
+                </div>
+              
+            
+              
+                <div class="flex flex-col items-center group">
+                  <img src="/images/mysql.svg" class="w-6 h-6 md:w-8 md:h-8 group-hover:scale-125 transition-all duration-300 transform group-hover:rotate-12 hover:animate-bounce" alt="MySQL" />
+                  <span class="text-xs md:text-sm mt-2">MySQL</span>
+                </div>
+              
+            
+              
+                <div class="flex flex-col items-center group">
+                  <img src="/images/mongodb.svg" class="w-6 h-6 md:w-8 md:h-8 group-hover:scale-125 transition-all duration-300 transform group-hover:rotate-12 hover:animate-bounce" alt="MongoDB" />
+                  <span class="text-xs md:text-sm mt-2">MongoDB</span>
+                </div>
+              
+            
+              
+                <div class="flex flex-col items-center group">
+                  <i class="fab fa-react text-blue-400 text-2xl md:text-4xl group-hover:scale-125 transition-all duration-300 transform group-hover:rotate-12 hover:animate-spin"></i>
+                  <span class="text-xs md:text-sm mt-2">ReactJS</span>
+                </div>
+              
+            
+              
+                <div class="flex flex-col items-center group">
+                  <img src="/images/redux.svg" class="w-6 h-6 md:w-8 md:h-8 group-hover:scale-125 transition-all duration-300 transform group-hover:rotate-12 hover:animate-bounce" alt="Redux" />
+                  <span class="text-xs md:text-sm mt-2">Redux</span>
+                </div>
+              
+            
+              
+                <div class="flex flex-col items-center group">
+                  <i class="fab fa-figma text-pink-600 text-2xl md:text-4xl group-hover:scale-125 transition-all duration-300 transform group-hover:rotate-12 hover:animate-bounce"></i>
+                  <span class="text-xs md:text-sm mt-2">Figma</span>
+                </div>
+              
+            
+              
+                <div class="flex flex-col items-center group">
+                  <img src="/images/canva.svg" class="w-6 h-6 md:w-8 md:h-8 group-hover:scale-125 transition-all duration-300 transform group-hover:rotate-12 hover:animate-bounce" alt="Canva" />
+                  <span class="text-xs md:text-sm mt-2">Canva</span>
+                </div>
+              
+            
+              
+                <div class="flex flex-col items-center group ">
+                  <div class="p-2 rounded-full w-11" style="background-color: #fff !important;">
+                    <img src="/images/express.svg" class="w-10 md:w-10 group-hover:scale-125 transition-all duration-300 transform group-hover:rotate-12 hover:animate-bounce" alt="Express" />
+                  </div>
+                  <span class="text-xs md:text-sm mt-2">Express</span>
+                </div>
+              
+            
+              
+                <div class="flex flex-col items-center group">
+                  <i class="fab fa-laravel text-red-600 text-2xl md:text-4xl group-hover:scale-125 transition-all duration-300 transform group-hover:rotate-12 hover:animate-bounce"></i>
+                  <span class="text-xs md:text-sm mt-2">Laravel</span>
+                </div>
+              
+            
+              
+                <div class="flex flex-col items-center group">
+                  <i class="fab fa-php text-indigo-600 text-2xl md:text-4xl group-hover:scale-125 transition-all duration-300 transform group-hover:rotate-12 hover:animate-bounce"></i>
+                  <span class="text-xs md:text-sm mt-2">PHP</span>
+                </div>
+              
+            
+          </div>
+          <div class="prose text-center hover:scale-105 transition-transform duration-300">
+            
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<section id="projects" class="py-5 w-full h-screen">
+    <div class="container">
+        <h3 class="text-center font-bold text-4xl mb-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">My Project</h3>
+        <div class="row justify-content-center px-3 px-md-5">
+            
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3 h-100" title="E-Survey Teknik Informatika">
+                    <div class="card-head">
+                        
+                        
+                            <img class="card-img-top" src="project/thumbnail/esurvey.jpg" alt="E-Survey Teknik Informatika">
+                        
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <div class="pb-2 bg-transparent">
+                            
+                            <span class="badge badge-secondary">Laravel</span>
+                            
+                            <span class="badge badge-secondary">Blade</span>
+                            
+                            <span class="badge badge-secondary">Tailwind</span>
+                            
+                            <span class="badge badge-secondary">MySQL</span>
+                            
+                        </div>
+                        <h5 class="card-title bg-transparent">E-Survey Teknik Informatika</h5>
+                        <div class="card-text bg-transparent secondary-font">
+                            Sistem survei online untuk Jurusan Teknik Informatika menggunakan Laravel Blade dan Tailwind CSS
+                        </div>
+                    </div>
+                    <div class="card-footer py-3">
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/username/esurvey-informatika" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://esurvey-informatika.netlify.app" target="_blank">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            
+                            <button class="btn btn-sm disabled" style="cursor: not-allowed; opacity: 0.6;">
+                                <i class="fas fa-ban me-1"></i>Lihat Demo
+                            </button>
+                            
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3 h-100" title="E-Parking Teknik Elektro">
+                    <div class="card-head">
+                        
+                        
+                            <img class="card-img-top" src="project/thumbnail/park2.png" alt="E-Parking Teknik Elektro">
+                        
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <div class="pb-2 bg-transparent">
+                            
+                            <span class="badge badge-secondary">Laravel</span>
+                            
+                            <span class="badge badge-secondary">MySQL</span>
+                            
+                            <span class="badge badge-secondary">Blade</span>
+                            
+                            <span class="badge badge-secondary">Tailwind CSS</span>
+                            
+                        </div>
+                        <h5 class="card-title bg-transparent">E-Parking Teknik Elektro</h5>
+                        <div class="card-text bg-transparent secondary-font">
+                            Sistem parkir otomatis untuk Jurusan Teknik Elektro menggunakan RFID dan monitoring berbasis web
+                        </div>
+                    </div>
+                    <div class="card-footer py-3">
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/username/eparking-elektro" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://eparking.my.id/" target="_blank">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            
+                            <a class="btn btn-sm" href="https://eparking.my.id/" target="_blank">
+                                Lihat Demo
+                            </a>
+                            
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
+<div class=" w-full h-screen flex items-center justify-center" id="contact">
+    <div class="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl  shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]">
+        <div>
+            <h1 class="text-3xl font-extrabold">Hubungi Saya</h1>
+            <p class="text-sm text-gray-400 mt-3">Punya ide besar atau brand untuk dikembangkan dan butuh bantuan? Hubungi saya, saya senang mendengar tentang proyek Anda dan memberikan bantuan.</p>
+            <div class="mt-12">
+                
+            </div>
+        </div>
+
+        <form id="contact-form" action="https://formspree.io/f/" method="POST" class="ml-auto space-y-4">
+            <input type="text" name="name" placeholder='Nama' required="true" class="w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]" />
+            <input type="email" name="email" placeholder='Email' required="true" class="w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]" />
+            <input type="tel" name="phone" placeholder='Nomor Telepon' required="true" class="w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]" />
+            <textarea name="message" placeholder='Pesan' required="true" rows="6" class="w-full rounded-md px-4 border text-sm pt-2.5 outline-[#007bff]"></textarea>
+            <button type="submit" class=" bg-[#007bff] hover:bg-blue-600 font-semibold rounded-md text-sm px-4 py-2.5 w-full hover:text-white">
+                Kirim Pesan
+            </button>
+        </form>
+    </div>
+</div>
+
+  </div><footer>
+    
+ 
+
+<div class="text-center pt-2">
+    
+
+    
+
+    
+
+    
+
+    
+</div><footer class=" relative ">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="drop-shadow-lg">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill" style="fill: #FF6B6B"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill" style="fill: #4ECDC4"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill" style="fill: #45B7D1"></path>
+        </svg>
+
+    <div class="container mx-auto py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            
+            <div class="text-center md:text-left">
+                
+                <p class="text-sm">Membantu mengembangkan bisnis Anda melalui solusi digital yang inovatif dan efektif.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="font-bold mb-4">Kontak</h3>
+                <ul class="space-y-2">
+                    <li class="hover:translate-x-2 transition-transform duration-300">
+                        <i class="fas fa-phone mr-2"></i>
+                        <a href="tel:+6281234567890">+62 812-5673-2703</a>
+                    </li>
+                    <li class="hover:translate-x-2 transition-transform duration-300">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <a href="mailto:kontak@example.com">nanda.pertama465@gmail.com</a>
+                    </li>
+                    <li class="hover:translate-x-2 transition-transform duration-300">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        West Kalimantan, Indonesia
+                    </li>
+                </ul>
+            </div>
+
+            
+            <div>
+                <h3 class="font-bold mb-4">Media Sosial</h3>
+                <div class="flex space-x-6">
+                    <a href="" class="hover:scale-125 transition-transform duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="#" class="hover:scale-125 transition-transform duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="hover:scale-125 transition-transform duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="https://www.linkedin.com/in/nanda-ikhwanul-866a0430a" class="hover:scale-125 transition-transform duration-300"><i class="fab fa-linkedin-in text-xl"></i></a>
+                    <a href="https://github.com/nandaikhwanul" class="hover:scale-125 transition-transform duration-300"><i class="fab fa-github text-xl"></i></a>
+                </div>
+            </div>
+
+            
+            <div>
+                <h3 class="font-bold mb-4">Blog Terbaru</h3>
+                <ul class="space-y-2">
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+       
+    </div>
+</footer>
+
+<style>
+.custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(140% + 1.3px);
+    height: 112px;
+}
+
+.custom-shape-divider-bottom .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+</style>
+</footer>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
